@@ -6,6 +6,8 @@ const signUpSuccess = function () {
   $('#display-message').html('Sign Up Successful')
   $('#display-message').css('color', 'green')
   $('#sign-up-form').trigger('reset')
+  $('#signInBox').removeClass('hidden')
+  $('#signUpBox').addClass('hidden')
 }
 
 const signUpFailure = function () {
@@ -20,7 +22,7 @@ const signInSuccess = function (response) {
   $('#display-message').css('color', 'green')
   $('#sign-in-form').trigger('reset')
   $('#sign-up-form').addClass('hidden')
-  $('#sign-in-form').addClass('hidden')
+  $('#signInBox').addClass('hidden')
   $('#change-password-form').removeClass('hidden')
   $('#sign-out-button').removeClass('hidden')
   $('#indexBikes').removeClass('hidden')
