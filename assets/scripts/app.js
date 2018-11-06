@@ -14,6 +14,14 @@ $(() => {
   $('#sign-in-form').on('submit', authEvents.onSignIn)
   $('#change-password-form').on('submit', authEvents.onChangePassword)
   $('#sign-out-form').on('click', authEvents.onSignOut)
+  $('.newAccount').on('click', authEvents, () => {
+    $('#signInBox').addClass('hidden')
+    $('#signUpBox').removeClass('hidden')
+  })
+  $('.existingAcct').on('click', authEvents, () => {
+    $('#signInBox').removeClass('hidden')
+    $('#signUpBox').addClass('hidden')
+  })
 
   $('#upload-form').on('submit', function (event) {
     event.preventDefault()
