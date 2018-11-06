@@ -39,7 +39,7 @@
               <form id="sign-in-form" class="form-signin">
                 <input required placeholder="Enter email" name="credentials[email]" class="form-control" type="email"/>
                 <input required placeholder="Enter password" name="credentials[password]" class="form-control" type="password"/>
-                <input type="submit" class="btn btn-default btn-block" value="Sign In"/>
+                <input type="submit" class="btn btn-default btn-block user" value="Sign In"/>
               </form>
             </div>
             <p class="newAccount">New User? Please sign up</p>
@@ -58,7 +58,7 @@
                 <input required placeholder="Enter email" name="credentials[email]" class="form-control" type="email"/>
                 <input required placeholder="Enter password" name="credentials[password]" class="form-control" type="password"/>
                 <input required placeholder="Confirm password" name="credentials[password_confirmation]" class="form-control" type="password"/>
-                <input type="submit" class="btn btn-primary btn-block" value="Sign Up"/>
+                <input type="submit" class="btn btn-default btn-block user" value="Sign Up"/>
               </form>
             </div>
             <p id="account" class="existingAcct">Already have an account?  Log in and start logging your dives!</p>
@@ -71,28 +71,30 @@
       <form id="change-password-form" class="hidden">
         <input required placeholder="Enter old password" name="passwords[old]" type="password"/>
         <input required placeholder="Enter new password" name="passwords[new]" type="password"/>
-        <input type="submit" class="btn btn-primary btn-sm" value="Change Password"/>
+        <input type="submit" class="btn btn-default btn-sm user" value="Change Password"/>
       </form>
 
       <h3 id="display-sign-out-message"></h3>
       <form id="sign-out-button" class="hidden">
-        <input type="submit" class="btn btn-primary btn-sm" value="Sign Out"/>
+        <input type="submit" class="btn btn-default btn-sm" value="Sign Out"/>
       </form>
 
       <br>
-
-      <form id='upload-form' enctype="multipart/form-data">
-        <fieldset>
-          <label>
-            Title
-            <input type="text" name="title">
-          </label>
-          <label>
-            Image
-            <input type="file" name="image">
-          </label>
-          <input type="submit" name="submit" value="Upload">
-        </fieldset>
-      </form>
+      <div class="database hidden">
+        <form id='upload-form' enctype="multipart/form-data">
+          <fieldset>
+            <label>
+              Title
+              <input type="text" name="title">
+            </label>
+            <label>
+              Image
+              <input type="file" name="image">
+            </label>
+            <input type="submit" name="submit" value="Upload">
+          </fieldset>
+        </form>
+        <button id="showAll" class="btn btn-default user"> Show All Images </button>
+      </div>
     </body>
 </html>

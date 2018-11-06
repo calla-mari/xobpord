@@ -2,6 +2,7 @@
 
 body {
   background: rgb(215, 225, 230);
+  text-align: center;
 }
 
 .form-signin {
@@ -77,4 +78,8 @@ body {
 .new-account {
   display: block;
   margin-top: 10px;
+}
+
+.user {
+    background: rgb(150, 200, 220);
 }
