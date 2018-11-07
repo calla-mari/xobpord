@@ -31,13 +31,6 @@ const signInSuccess = function (response) {
   $('.small').removeClass('hidden')
   $('#upload-form').removeClass('hidden')
   $('#showAll').removeClass('hidden')
-  // $('#sign-up-form').addClass('hidden')
-  // $('#change-password-form').removeClass('hidden')
-  // $('#indexBikes').removeClass('hidden')
-  // $('#create-bike-form').removeClass('hidden')
-  // $('#show-bike-form').removeClass('hidden')
-  // $('#update-bike-form').removeClass('hidden')
-  // $('#delete-bike-form').removeClass('hidden')
 }
 
 const signInFailure = function () {
@@ -52,8 +45,6 @@ const signOutSuccess = function () {
   $('#display-message').css('color', 'rgb(40, 140, 180)')
   $('#display-message').removeClass('hidden')
   $('#signInBox').removeClass('hidden')
-  // $('#sign-in-form').removeClass('hidden')
-  // $('#change-password-form').addClass('hidden')
   $('.signout').addClass('hidden')
   $('#upload-form').addClass('hidden')
   $('#showAll').addClass('hidden')
