@@ -11,6 +11,7 @@ const config = require('./config.js')
 const store = require('./store')
 
 $(() => {
+  $('.display-uploads').addClass('hidden')
   // your JS code goes here
   $('#sign-up-form').on('submit', authEvents.onSignUp)
   $('#sign-in-form').on('submit', authEvents.onSignIn)
@@ -41,6 +42,7 @@ $(() => {
     $('.changePass').addClass('hidden')
     $('.database').addClass('hidden')
     $('#display-message').addClass('hidden')
+    $('.display-uploads').addClass('hidden')
   })
   // 'cancel' password change button
   $('#cancel').on('click', authEvents, () => {

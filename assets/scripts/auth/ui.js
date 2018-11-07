@@ -51,6 +51,7 @@ const signOutSuccess = function () {
   $('.password').addClass('hidden')
   $('.changePass').addClass('hidden')
   $('.small').addClass('hidden')
+  $('.display-uploads').addClass('hidden')
 }
 
 const signOutFailure = function () {

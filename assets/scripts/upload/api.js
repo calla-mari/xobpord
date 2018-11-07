@@ -36,8 +36,20 @@ const deleteUpload = function (id) {
   })
 }
 
+const updateUpload = function (data, id) {
+  return $.ajax({
+    method: 'PATCH',
+    url: config.apiUrl + `/uploads/${id}`,
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    },
+    data: data
+  })
+}
+
 module.exports = {
   uploadFile,
   deleteUpload,
-  showAll
+  showAll,
+  updateUpload
 }

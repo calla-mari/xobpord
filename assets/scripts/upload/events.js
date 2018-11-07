@@ -2,12 +2,13 @@
 
 const api = require('./api.js')
 const ui = require('./ui.js')
+const getFormFields = require('../../../lib/get-form-fields.js')
 
 const onUploadForm = function (event) {
   event.preventDefault()
   const data = new FormData(event.target)
   api.uploadFile(data)
-    .then(response => console.log(response))
+    .then(() => onShowAll(event))
     .catch(response => console.log(response))
 }
 
@@ -17,7 +18,7 @@ const onShowAll = function (event) {
     .then(ui.showAllSuccess)
     .then(() => {
       $('.delete-upload').on('click', onDeleteUpload)
-      $('.update-upload').on('click', onUpdateUpload)
+      $('.update-upload').on('submit', onUpdateUpload)
     })
     .catch(console.error)
 }
@@ -31,7 +32,10 @@ const onDeleteUpload = function (event) {
 
 const onUpdateUpload = function (event) {
   event.preventDefault()
-  console.log(event.target)
+  const data = getFormFields(event.target)
+  api.updateUpload(data, event.target.id)
+    .then(() => onShowAll(event))
+    .catch(console.error)
 }
 
 module.exports = {
