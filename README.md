@@ -1,4 +1,4 @@
-[![Mask and Fins](https://i.imgur.com/KdHR3fq.png)](https://i.imgur.com/KdHR3fq.png)
+[![Xobpord](https://i.imgur.com/pho4qb5.png)](https://plastic-murder.github.io/third-project-client/)
 
 # Xobpord
 
@@ -12,7 +12,7 @@ This application is a Dive log application client.  In combination with the Dive
 - HTML
 - CSS
 - Javascript
-- Bootstrap modal
+- Bootstrap
 - handlebars
 - Ruby on Rails
 
@@ -28,23 +28,27 @@ The process stared with planning a user story and ERD, then the wireframe just f
 
 ## User Story
 
-[User Story]()
+[User Story](https://imgur.com/a/Gyd8TSZ)
+
+## Questions for Client
+
+[Questions](https://imgur.com/a/nCG8gNr)
 
 ## Wireframes
 
-[Wireframes]()
+[Wireframes](https://imgur.com/a/GxXLGB3)
 
 ## Entity Relationship Diagram (ERD)
 
-[ERD]()
+[ERD](https://imgur.com/a/0OeCHfI)
 
-## Dive Log Client
+## Xobpord Client
 
-[Client Website]()
+[Client Website](https://plastic-murder.github.io/third-project-client/)
 
 [Client Repository](https://github.com/Plastic-Murder/third-project-client)
 
-## Dive Log Server
+## Xobpord Server
 
 [Server Website](https://xobpord.herokuapp.com/)
 
