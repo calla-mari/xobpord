@@ -33,7 +33,8 @@ const onDeleteUpload = function (event) {
 const onUpdateUpload = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
-  api.updateUpload(data, event.target.id)
+  const correctedData = {upload: data}
+  api.updateUpload(correctedData, event.target.id)
     .then(() => onShowAll(event))
     .catch(console.error)
 }
