@@ -4,6 +4,7 @@ const store = require('../store.js')
 const uploadTableTemplate = require('../templates/upload-table.handlebars')
 
 const showAllSuccess = function (data) {
+  $('.display-uploads').removeClass('hidden')
   $('.uploads-table').html('')
   const templateData = data
   templateData.uploads.map(upload => upload.currentUser = store.user) 

@@ -3,7 +3,12 @@ const correctUser = function (id, userID, owner) {
     if (bool) {
         return `
         <button id="${id}" class="btn btn-danger delete-upload">Delete</button>
-        <button id="${id}" class="btn btn-primary update-upload">Update</button>`
+        <form id="${id}" class="update-upload">
+            <fieldset>
+                <input type="text" name="tag" placeholder="Tag">
+                <input type="submit" class="btn btn-primary" value="Update"></input>
+            </fieldset>
+        </form>`
     } else {
         return ''
     }
