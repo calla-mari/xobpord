@@ -13,14 +13,42 @@ $(() => {
   $('#sign-up-form').on('submit', authEvents.onSignUp)
   $('#sign-in-form').on('submit', authEvents.onSignIn)
   $('#change-password-form').on('submit', authEvents.onChangePassword)
-  $('#sign-out-form').on('click', authEvents.onSignOut)
-  $('.newAccount').on('click', authEvents, () => {
+  $('.signout').on('click', authEvents.onSignOut)
+  // 'create account' button
+  $('.createAccount').on('click', authEvents, () => {
     $('#signInBox').addClass('hidden')
     $('#signUpBox').removeClass('hidden')
+    $('#display-message').addClass('hidden')
   })
-  $('.existingAcct').on('click', authEvents, () => {
+  // 'Back to log in' button
+  $('.backToLogIn').on('click', authEvents, () => {
     $('#signInBox').removeClass('hidden')
     $('#signUpBox').addClass('hidden')
+  })
+  // form-control input field
+  $('.form-control').on('click', authEvents, () => {
+    $('#display-message').addClass('hidden')
+  })
+  $('.inputBox').on('click', authEvents, () => {
+    $('#display-message').addClass('hidden')
+  })
+  // 'changePass' password change button
+  $('.changePass').on('click', authEvents, () => {
+    $('.password').removeClass('hidden')
+    $('#change-password-form').trigger('reset')
+    $('.changePass').addClass('hidden')
+    $('.database').addClass('hidden')
+    $('#display-message').addClass('hidden')
+  })
+  // 'cancel' password change button
+  $('#cancel').on('click', authEvents, () => {
+    $('.password').addClass('hidden')
+    $('#change-password-form').trigger('reset')
+    $('#display-message').html('Did NOT change password')
+    $('#display-message').css('color', 'red')
+    $('#display-message').removeClass('hidden')
+    $('.database').removeClass('hidden')
+    $('.changePass').removeClass('hidden')
   })
 
   $('#upload-form').on('submit', function (event) {
