@@ -4,8 +4,7 @@
 
 ## Description
 
-This application is a Dive log application client.  In combination with the Dive log application server, the app allows users to create an account then log in to keep track and maintain a dive log.  The user, once log in can change passwords, add, delete, edit and look at all the dives that they have logged.
-
+This application allows users to upload image files to a database where all users can upload, view and download all files in the database.  In addition, the owners of the files have the permision to edit and delete their own files.  
 
 ## Technologies used
 
@@ -13,18 +12,21 @@ This application is a Dive log application client.  In combination with the Dive
 - CSS
 - Javascript
 - Bootstrap
-- handlebars
-- Ruby on Rails
+- git
+- Amazon Web Services (AWS)
+- Node
+- Express
+- Multer
 
 ## Next Version
 
-- add more fields for user inputs
+- searchable keywords and tags
+- collaboration/permission system so non owners can also edit files
 - styling
-- involve 3rd party API where weather data can automatically populate the log once location and date is entered
 
 ## Planning
 
-The process stared with planning a user story and ERD, then the wireframe just falls into place.  The user authentication was created first follow by the backend API, and making sure that the relationship exist between the users and the dive logs.  After all of that is set up, some time was allocated to styling the website.  Future versions will have a lot more input fields and the option to pull in weather information from a 3rd party API based on location and date entered.  Lack of experience with bootstrap modal made it challenging to incoorporate and utilize but the documentations were helpful.
+The process started with planning a user story and ERD, then the wireframe just fell into place.  The user authentication and file upload forms were created in parallel with the backend API while making sure that the relationship exists between the users and the database.  After all of that is set up, some time was allocated to styling the website.  Future versions will have searchable field for keyword and tag searches.  Lack of experience with AWS S3 and working with git as a team was a challenge in the beginning.
 
 ## User Story
 
