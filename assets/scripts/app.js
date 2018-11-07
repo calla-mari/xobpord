@@ -6,7 +6,9 @@
 // use require without a reference to ensure a file is bundled
 // require('./example')
 const authEvents = require('./auth/events.js')
+const uploadEvents = require('./upload/events')
 const config = require('./config.js')
+const store = require('./store')
 
 $(() => {
   // your JS code goes here
@@ -51,22 +53,7 @@ $(() => {
     $('.changePass').removeClass('hidden')
   })
 
-  $('#upload-form').on('submit', function (event) {
-    event.preventDefault()
-    const data = new FormData(event.target)
-    $.ajax({
-      method: 'POST',
-      url: config.apiUrl + '/uploads',
-      processData: false, // Important!
-      contentType: false,
-      data: data
-    })
-      .then((response) => {
-        console.log(response)
-        $('#new-image').attr('src', response.upload.url)
-      })
-      .catch((response) => {
-        console.log(response)
-      })
-  })
+  $('#upload-form').on('submit', uploadEvents.onUploadForm)
+
+  $('#showAll').on('click', uploadEvents.onShowAll)
 })
