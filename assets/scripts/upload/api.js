@@ -3,46 +3,41 @@
 const config = require('../config.js')
 const store = require('../store.js')
 
-// const signUp = function (userData) {
-//   return $.ajax({
-//     url: config.apiUrl + '/sign-up',
-//     method: 'POST',
-//     data: userData
-//   })
-// }
+const uploadFile = function (data) {
+  return $.ajax({
+    method: 'POST',
+    url: config.apiUrl + '/uploads',
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    },
+    processData: false, // Important!
+    contentType: false,
+    data: data
+  })
+}
 
-// const signIn = function (userData) {
-//   return $.ajax({
-//     url: config.apiUrl + '/sign-in',
-//     method: 'POST',
-//     data: userData
-//   })
-// }
+const showAll = function () {
+  return $.ajax({
+    method: 'GET',
+    url: config.apiUrl + '/uploads',
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    }
+  })
+}
 
-// const changePassword = function (passwordData) {
-//   return $.ajax({
-//     url: config.apiUrl + '/change-password',
-//     headers: {
-//       Authorization: `Token token=${store.user.token}`
-//     },
-//     method: 'PATCH',
-//     data: passwordData
-//   })
-// }
-
-// const signOut = function () {
-//   return $.ajax({
-//     url: config.apiUrl + '/sign-out',
-//     headers: {
-//       Authorization: `Token token=${store.user.token}`
-//     },
-//     method: 'DELETE'
-//   })
-// }
+const deleteUpload = function (id) {
+  return $.ajax({
+    method: 'DELETE',
+    url: config.apiUrl + `/uploads/${id}`,
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    }
+  })
+}
 
 module.exports = {
-  signUp,
-  signIn,
-  changePassword,
-  signOut
+  uploadFile,
+  deleteUpload,
+  showAll
 }

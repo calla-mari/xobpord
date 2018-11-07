@@ -1,0 +1,11 @@
+{{#each uploads as |upload|}}
+    <tr id="{{upload._id}}-uploads">
+        <td>{{upload.title}}</td>
+        <td><a href="{{upload.url}}">{{upload.url}}</a></td>
+        <td>{{upload.tags}}</td>
+        <td>
+            {{#correctUser upload._id upload.currentUser._id upload.owner }}
+            {{/correctUser}}
+        </td>
+    </tr>
+{{/each}}
