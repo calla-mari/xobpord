@@ -19,7 +19,7 @@
                     <div class="row imageRow">
                         {{#each uploads as |upload|}}
                             <div class="col-md-4 col-sm-6 portfolio-item">
-                                <div id="{{upload._id}}-uploads">
+                                <div id="{{upload._id}}-uploads" class="shadow">
                                     {{#imageOrNot upload.url}}
                                     {{/imageOrNot}}
                                     <div class="portfolio-caption">
