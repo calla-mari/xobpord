@@ -15,9 +15,9 @@
         <div class="row">
             <div class="col-lg-12 text-center">
               <h2 class="section-heading">All Files</h2>
-                {{#each uploads as |upload|}}
-                    <div class="container-fluid">
-                        <div class="row">
+                <div class="container-fluid">
+                    <div class="row">
+                        {{#each uploads as |upload|}}
                             <div class="col-md-4 col-sm-6 portfolio-item">
                                 <div id="{{upload._id}}-uploads">
                                     <a class="portfolio-link portfolio-hover" href="{{upload.url}}">
@@ -31,9 +31,9 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        {{/each}}
                     </div>
-                {{/each}}
+                </div>
             </div>
         </div>
     </div>
