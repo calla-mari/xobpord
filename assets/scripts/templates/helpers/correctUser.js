@@ -24,10 +24,10 @@ const correctUser = function (id, userID, owner) {
         <form id="${id}" class="update-upload">
             <fieldset>
                 <input type="text" name="tag" placeholder="Tag">
-                <input type="submit" class="btn btn-primary" value="Update"></input>
+                <input type="submit" class="btn btn-sm btn-defualt updateBtn" value="Update"></input>
+                <a id="${id}" class="btn delete-upload material-icons" data-toggle="tooltip" style="color:rgb(90, 190, 230)">&#xE872;</a>
             </fieldset>
-        </form>
-        <a id="${id}" class="btn delete-upload material-icons" data-toggle="tooltip" style="color:rgb(90, 190, 230)">&#xE872;</a>`
+        </form>`
     } else {
         return ''
     }

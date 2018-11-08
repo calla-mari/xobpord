@@ -31,6 +31,7 @@ const signInSuccess = function (response) {
   $('.small').removeClass('hidden')
   $('#upload-form').removeClass('hidden')
   $('#showAll').removeClass('hidden')
+  $('.navbar').removeClass('hidden')
 }
 
 const signInFailure = function () {
@@ -54,6 +55,7 @@ const signOutSuccess = function () {
   $('.display-uploads').addClass('hidden')
   $('#upload-form').trigger('reset')
   $('.display-uploads').addClass('hidden')
+  $('.navbar').addClass('hidden')
 }
 
 const signOutFailure = function () {
