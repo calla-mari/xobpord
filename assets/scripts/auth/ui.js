@@ -3,7 +3,7 @@
 const store = require('../store.js')
 
 const signUpSuccess = function () {
-  $('#display-message').html('Sign Up Successful! Please log in')
+  $('#display-message').html('Sign up successful! Please log in')
   $('#display-message').css('color', 'rgb(40, 140, 180)')
   $('#display-message').removeClass('hidden')
   $('#sign-up-form').trigger('reset')
@@ -12,7 +12,7 @@ const signUpSuccess = function () {
 }
 
 const signUpFailure = function () {
-  $('#display-message').html('Sign Up Failure, please try again')
+  $('#display-message').html('Sign up failure, please try again')
   $('#display-message').css('color', 'red')
   $('#display-message').removeClass('hidden')
   $('#sign-up-form').trigger('reset')
@@ -20,7 +20,7 @@ const signUpFailure = function () {
 
 const signInSuccess = function (response) {
   store.user = response.user
-  $('#display-message').html('Signed In As: ' + store.user.email + ', User ID: ' + store.user.id)
+  $('#display-message').html('Welcome to Xobpord!!')
   $('#display-message').css('color', 'rgb(40, 140, 180)')
   $('#display-message').removeClass('hidden')
   $('#sign-in-form').trigger('reset')
@@ -34,14 +34,14 @@ const signInSuccess = function (response) {
 }
 
 const signInFailure = function () {
-  $('#display-message').html('Sign In Failure, please try again')
-  $('#display-message').css('color', 'rgb(40, 140, 180)')
+  $('#display-message').html('Sign in failure, please try again')
+  $('#display-message').css('color', 'red')
   $('#display-message').removeClass('hidden')
   $('#sign-in-form').trigger('reset')
 }
 
 const signOutSuccess = function () {
-  $('#display-message').html('Sign Out successful')
+  $('#display-message').html('Sign out successful')
   $('#display-message').css('color', 'rgb(40, 140, 180)')
   $('#display-message').removeClass('hidden')
   $('#signInBox').removeClass('hidden')
@@ -52,16 +52,17 @@ const signOutSuccess = function () {
   $('.changePass').addClass('hidden')
   $('.small').addClass('hidden')
   $('.display-uploads').addClass('hidden')
+  $('#upload-form').trigger('reset')
 }
 
 const signOutFailure = function () {
-  $('#display-message').html('Log out unsuccessful, Please try again')
+  $('#display-message').html('Log out unsuccessful, please try again')
   $('#display-message').css('color', 'red')
   $('#display-message').removeClass('hidden')
 }
 
 const changePasswordSuccess = function () {
-  $('#display-message').html('Password Change Successful')
+  $('#display-message').html('Password change successful')
   $('#display-message').css('color', 'rgb(40, 140, 180)')
   $('#display-message').removeClass('hidden')
   $('#change-password-form').trigger('reset')
@@ -71,7 +72,7 @@ const changePasswordSuccess = function () {
 }
 
 const changePasswordFailure = function () {
-  $('#display-message').html('Password Change Failure, please try again')
+  $('#display-message').html('Password change Failure, please try again')
   $('#display-message').css('color', 'red')
   $('#display-message').removeClass('hidden')
   $('#change-password-form').trigger('reset')

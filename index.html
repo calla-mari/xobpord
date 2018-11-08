@@ -88,12 +88,12 @@
         <form id='upload-form' enctype="multipart/form-data">
           <fieldset>
             <label>
-              <h3>Title</h3>
-              <input type="text" class="inputBox" name="title">
-            </label>
-            <label>
               <h3>Image</h3>
               <input type="file" class="inputBox" name="image">
+            </label>
+            <label>
+              <h3>Title</h3>
+              <input type="text" class="inputBox" name="title">
             </label>
             <label>
               <h3>Tag</h3>
@@ -104,18 +104,20 @@
         </form>
         <button id="showAll" class="btn btn-default user"> Show All Images </button>
       </div>
-      <div class="table-container container-fluid">
-        <table class="display-uploads table table-bordered table-light table-hover">
-          <thead>
-            <tr>
-                <th scope="col">Title</th>
-                <th scope="col">URL</th>
-                <th scope="col">Tag</th>
-                <th scope="col"></th>
-            </tr>
-            <tbody class="uploads-table"></tbody>
-          </thead>
-        </table>
+      <div class="showtable">
+        <div class="table-container container-fluid">
+          <table class="display-uploads table table-bordered table-light table-hover">
+            <thead>
+              <tr>
+                  <th scope="col">Title</th>
+                  <th scope="col">URL</th>
+                  <th scope="col">Tag</th>
+                  <th scope="col"></th>
+              </tr>
+              <tbody class="uploads-table"></tbody>
+            </thead>
+          </table>
+        </div>
       </div>
     </body>
 </html>
