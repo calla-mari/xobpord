@@ -55,6 +55,10 @@ body {
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
+.account-wall.pass {
+  margin-top: 70px;
+}
+
 .login-title {
   color: #555;
   font-size: 30px;
@@ -84,6 +88,13 @@ body {
     padding: 8px;
 }
 
+.updateBtn {
+  background: rgb(90, 190, 230);
+  color: #fff;
+  font-size: 10px;
+  padding: 5;
+}
+
 .exitButton {
     background: rgb(163, 213, 233);
     color: rgb(40, 140, 180);
@@ -107,18 +118,36 @@ strong {
 
 .small {
     display: block;
-    width: 96px;
+    width: 40px;
     margin: 20px;
     float: left;
   }
 
-  .mainBody {
-      clear: left;
-  }
+#display-message {
+  font-family: 'PT Sans', sans-serif;
+  text-align: center;
+  margin: auto;
+}
+
+.mainBody {
+    clear: left;
+}
   
 .changePass, .signout {
     float: right;
-    margin: 50px 10px 20px 8px;
+    margin: 20px 10px 20px 8px;
+}
+
+.changePass, .signout {
+  color: #fff;
+}
+
+.signout {
+  color: rgb(40, 140, 180);
+}
+
+.database {
+  margin: 20px;
 }
 
 .inputBox {
@@ -130,10 +159,254 @@ strong {
     display: block;  
 }
 
+.material-icons {
+  font-size: 20px;
+}
+
 #cancel {
     margin-top: 10px;
 }
 
 .signout {
     margin-right: 20px;
+}
+
+#showAll {
+  margin: 20px;
+}
+
+.allFiles {
+  margin: 20px;
+}
+
+#portfolio .portfolio-item {
+  right: 0;
+  margin: 0 0 15px;
+}
+
+#portfolio .portfolio-item .portfolio-link {
+  position: relative;
+  display: block;
+  max-width: 400px;
+  max-height: 400px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+  opacity: 0;
+  background: rgba(130, 67, 140, 0.8);
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
+  opacity: 1;
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 20px;
+  margin-top: -12px;
+  text-align: center;
+  color: white;
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content i {
+  margin-top: -12px;
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h3,
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h4 {
+  margin: 0;
+}
+
+#portfolio .portfolio-item .portfolio-caption {
+  max-width: 400px;
+  max-height: 400px;
+  margin: 0 auto;
+  padding: 25px;
+  text-align: center;
+  background-color: #fff;
+}
+
+#portfolio .portfolio-item .portfolio-caption h4 {
+  margin: 0;
+  text-transform: none;
+}
+
+#portfolio .portfolio-item .portfolio-caption p {
+  font-size: 16px;
+  font-style: italic;
+  margin: 0;
+}
+
+#portfolio * {
+  z-index: 2;
+}
+
+@media (min-width: 767px) {
+  #portfolio .portfolio-item {
+    margin: 0 0 30px;
+  }
+}
+
+.portfolio-box {
+  position: relative;
+  display: block;
+  overflow:hidden;
+  object-fit: contain;
+  max-width: 650px;
+  max-height: 650px;
+  margin: 0 auto;
+}
+
+.image {
+  background: #f7f7f7;
+  position: relative;
+  object-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  max-width: 650px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.portfolio-box .portfolio-box-caption {
+  position:   solute;
+  bottom: 0;
+  display: block;
+  width: auto;
+  height: auto;
+  text-align: center;
+  opacity: 0;
+  color: #fff;
+  background: rgba(130, 67, 140, 0.8);
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: auto;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category,
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+  padding: 0 15px;
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+  font-size: 18px;
+}
+
+.portfolio-box:hover .portfolio-box-caption {
+  opacity: 1;
+}
+
+.portfolio-box:focus {
+  outline: none;
+}
+
+.shadow {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+ }
+
+
+// bootstrap template
+#mainNav {
+  border-bottom: 1px solid rgba(33, 37, 41, 0.1);
+  background-color: rgb(215, 225, 230);
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+#mainNav .navbar-brand {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: rgb(92, 48, 99);
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+#mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
+  color: rgb(92, 48, 99);
+}
+
+#mainNav .navbar-nav > li.nav-item > a.nav-link:hover,
+#mainNav .navbar-nav > li.nav-item > a.nav-link:focus:hover {
+  color: rgb(92, 48, 99);
+}
+
+#mainNav .navbar-nav > li.nav-item > a.nav-link.active,
+#mainNav .navbar-nav > li.nav-item > a.nav-link:focus.active {
+  color: rgb(92, 48, 99) !important;
+  background-color: rgb(215, 225, 230);
+}
+
+#mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover,
+#mainNav .navbar-nav > li.nav-item > a.nav-link:focus.active:hover {
+  background-color: rgb(215, 225, 230);
+}
+
+@media (min-width: 992px) {
+  #mainNav {
+    border-color: transparent;
+    background-color: rgb(215, 225, 230);
+  }
+  #mainNav .navbar-brand {
+    color: rgb(215, 225, 230);
+  }
+  #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
+    color: rgb(215, 225, 230);
+  }
+  #mainNav .navbar-nav > li.nav-item > a.nav-link {
+    padding: 0.5rem 1rem;
+  }
+  #mainNav .navbar-nav > li.nav-item > a.nav-link,
+  #mainNav .navbar-nav > li.nav-item > a.nav-link:focus {
+    color: rgb(215, 225, 230);
+  }
+  #mainNav .navbar-nav > li.nav-item > a.nav-link:hover,
+  #mainNav .navbar-nav > li.nav-item > a.nav-link:focus:hover {
+    color: rgb(215, 225, 230);
+  }
+  #mainNav.navbar-shrink {
+    border-bottom: 1px solid rgba(33, 37, 41, 0.1);
+    background-color: rgb(215, 225, 230);
+  }
+  #mainNav.navbar-shrink .navbar-brand {
+    color: rgb(92, 48, 99);
+  }
+  #mainNav.navbar-shrink .navbar-brand:focus, #mainNav.navbar-shrink .navbar-brand:hover {
+    color: rgb(92, 48, 99);
+  }
+  #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link,
+  #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:focus {
+    color: #212529;
+  }
+  #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:hover,
+  #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:focus:hover {
+    color: rgb(92, 48, 99);
+  }
 }

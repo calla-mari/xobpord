@@ -9,7 +9,7 @@ const onUploadForm = function (event) {
   const data = new FormData(event.target)
   api.uploadFile(data)
     .then(() => onShowAll(event))
-    .catch(response => console.log(response))
+    .catch(ui.failure)
 }
 
 const onShowAll = function (event) {
@@ -20,14 +20,14 @@ const onShowAll = function (event) {
       $('.delete-upload').on('click', onDeleteUpload)
       $('.update-upload').on('submit', onUpdateUpload)
     })
-    .catch(console.error)
+    .catch(ui.failure)
 }
 
 const onDeleteUpload = function (event) {
   event.preventDefault()
   api.deleteUpload(event.target.id)
     .then(() => onShowAll(event))
-    .catch(console.error)
+    .catch(ui.failure)
 }
 
 const onUpdateUpload = function (event) {
@@ -36,10 +36,12 @@ const onUpdateUpload = function (event) {
   const correctedData = {upload: data}
   api.updateUpload(correctedData, event.target.id)
     .then(() => onShowAll(event))
-    .catch(console.error)
+    .catch(ui.failure)
 }
 
 module.exports = {
   onUploadForm,
-  onShowAll
+  onShowAll,
+  onDeleteUpload,
+  onUpdateUpload
 }

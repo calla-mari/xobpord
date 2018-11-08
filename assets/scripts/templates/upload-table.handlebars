@@ -1,4 +1,4 @@
-{{#each uploads as |upload|}}
+{{!-- {{#each uploads as |upload|}}
     <tr id="{{upload._id}}-uploads">
         <td>{{upload.title}}</td>
         <td><a href="{{upload.url}}">{{upload.url}}</a></td>
@@ -8,4 +8,32 @@
             {{/correctUser}}
         </td>
     </tr>
-{{/each}}
+{{/each}} --}}
+
+<section class="bg-light display-uploads" id="portfolio">
+    <div class="container showtable">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+              <h1 class="section-heading allFiles">All Files</h1>
+                <div class="container-fluid">
+                    <div class="row imageRow">
+                        {{#each uploads as |upload|}}
+                            <div class="col-md-4 col-sm-6 portfolio-item">
+                                <div id="{{upload._id}}-uploads" class="shadow">
+                                    {{#imageOrNot upload.url}}
+                                    {{/imageOrNot}}
+                                    <div class="portfolio-caption">
+                                        <h4>{{upload.title}}</h4>
+                                        <h5>{{upload.tag}}</h5>
+                                        {{#correctUser upload._id upload.currentUser._id upload.owner }}
+                                        {{/correctUser}}
+                                    </div>
+                                </div>
+                            </div>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

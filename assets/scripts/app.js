@@ -43,6 +43,7 @@ $(() => {
     $('.database').addClass('hidden')
     $('#display-message').addClass('hidden')
     $('.display-uploads').addClass('hidden')
+    $('#upload-form').trigger('reset')
   })
   // 'cancel' password change button
   $('#cancel').on('click', authEvents, () => {
@@ -56,6 +57,9 @@ $(() => {
   })
 
   $('#upload-form').on('submit', uploadEvents.onUploadForm)
-
   $('#showAll').on('click', uploadEvents.onShowAll)
+  $('#showAll').on('click', authEvents, () => {
+    $('#display-message').addClass('hidden')
+  })
+  
 })
