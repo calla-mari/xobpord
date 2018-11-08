@@ -58,4 +58,8 @@ $(() => {
 
   $('#upload-form').on('submit', uploadEvents.onUploadForm)
   $('#showAll').on('click', uploadEvents.onShowAll)
+  $('#showAll').on('click', authEvents, () => {
+    $('#display-message').addClass('hidden')
+  })
+  
 })

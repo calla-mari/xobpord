@@ -53,6 +53,7 @@ const signOutSuccess = function () {
   $('.small').addClass('hidden')
   $('.display-uploads').addClass('hidden')
   $('#upload-form').trigger('reset')
+  $('.display-uploads').addClass('hidden')
 }
 
 const signOutFailure = function () {
