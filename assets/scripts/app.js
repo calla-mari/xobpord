@@ -22,11 +22,15 @@ $(() => {
     $('#signInBox').addClass('hidden')
     $('#signUpBox').removeClass('hidden')
     $('#display-message').addClass('hidden')
+    $('#sign-up-error').addClass('hidden')
+    $('#sign-in-error').addClass('hidden')
   })
   // 'Back to log in' button
   $('.backToLogIn').on('click', authEvents, () => {
     $('#signInBox').removeClass('hidden')
     $('#signUpBox').addClass('hidden')
+    $('#sign-up-error').addClass('hidden')
+    $('#sign-in-error').addClass('hidden')
   })
   // form-control input field
   $('.form-control').on('click', authEvents, () => {

@@ -335,7 +335,6 @@ strong {
 
 // bootstrap template
 #mainNav {
-  border-bottom: 1px solid rgba(33, 37, 41, 0.1);
   background-color: rgb(215, 225, 230);
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
   -webkit-transition: all 0.2s;
@@ -371,7 +370,6 @@ strong {
 
 @media (min-width: 992px) {
   #mainNav {
-    border-color: transparent;
     background-color: rgb(215, 225, 230);
   }
   #mainNav .navbar-brand {
@@ -392,7 +390,6 @@ strong {
     color: rgb(215, 225, 230);
   }
   #mainNav.navbar-shrink {
-    border-bottom: 1px solid rgba(33, 37, 41, 0.1);
     background-color: rgb(215, 225, 230);
   }
   #mainNav.navbar-shrink .navbar-brand {

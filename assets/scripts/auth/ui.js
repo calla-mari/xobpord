@@ -9,12 +9,13 @@ const signUpSuccess = function () {
   $('#sign-up-form').trigger('reset')
   $('#signInBox').removeClass('hidden')
   $('#signUpBox').addClass('hidden')
+  $('#sign-up-error').addClass('hidden')
 }
 
 const signUpFailure = function () {
-  $('#display-message').html('Sign up failure, please try again')
-  $('#display-message').css('color', 'red')
-  $('#display-message').removeClass('hidden')
+  $('#sign-up-error').html('Sign up failure, please try again')
+  $('#sign-up-error').css('color', 'red')
+  $('#sign-up-error').removeClass('hidden')
   $('#sign-up-form').trigger('reset')
 }
 
@@ -32,12 +33,13 @@ const signInSuccess = function (response) {
   $('#upload-form').removeClass('hidden')
   $('#showAll').removeClass('hidden')
   $('.navbar').removeClass('hidden')
+  $('#sign-up-error').addClass('hidden')
 }
 
 const signInFailure = function () {
-  $('#display-message').html('Sign in failure, please try again')
-  $('#display-message').css('color', 'red')
-  $('#display-message').removeClass('hidden')
+  $('#sign-in-error').html('Sign in failure, please try again')
+  $('#sign-in-error').css('color', 'red')
+  $('#sign-in-error').removeClass('hidden')
   $('#sign-in-form').trigger('reset')
 }
 
@@ -45,6 +47,8 @@ const signOutSuccess = function () {
   $('#display-message').html('Sign out successful')
   $('#display-message').css('color', 'rgb(40, 140, 180)')
   $('#display-message').removeClass('hidden')
+  $('#sign-up-error').html('')
+  $('#sign-in-error').html('')
   $('#signInBox').removeClass('hidden')
   $('.signout').addClass('hidden')
   $('#upload-form').addClass('hidden')

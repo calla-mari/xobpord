@@ -34,7 +34,7 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                  <button class="nav-link js-scroll-trigger changePass btn btn-default user"> Change Password </button>
+                  <button class="nav-link js-scroll-trigger changePass btn user"> Change Password </button>
                 </li>
                 <li class="nav-item">
                   <button class="nav-link js-scroll-trigger signout btn btn-default exitButton">Sign Out</button>
@@ -66,6 +66,7 @@
                 <input type="submit" class="btn btn-default btn-block user" value="Sign In"/>
               </form>
             </div>
+            <div id="sign-in-error" class="hidden"></div>
             <h3 class="createAccount">New User? Please sign up</h3>
             <button class="btn btn-default createAccount user"> Create Account </button>
           </div>
@@ -76,7 +77,8 @@
       <!-- Sign up form -->
       <div id="signUpBox" class="container-fluid hidden">
         <div class="row">
-          <div class="col-sm-6 col-md-4 col-md-offset-4">
+          <div class="col-sm-2 col-lg-4"></div>
+          <div class="col-xs-12 col-sm-8 col-lg-4">
             <h1 class="text-center login-title">Sign up to continue to <strong>Xobpord</strong></h1>
             <div class="account-wall">
               <img class="profile-img" src="https://i.imgur.com/HUnMNAp.png" alt="Xobpord">
@@ -87,23 +89,29 @@
                 <input type="submit" class="btn btn-default btn-block user" value="Sign Up"/>
               </form>
             </div>
+            <div id="sign-up-error" class="hidden"></div>
             <h3 id="account" class="backToLogIn">Already have an account?  Log in and start uploading files!</h3>
             <button id="logIn" class="btn btn-default backToLogIn user"> Back to Log In </button>
           </div>
+          <div class="col-sm-2 col-lg-4"></div>
         </div>
       </div>
 
       <!-- Password form> -->
       <div class="password hidden">
-        <div class="col-sm-6 col-md-4 col-md-offset-4">
-          <div class="account-wall pass">
-            <form id="change-password-form">
-              <input required placeholder="Enter old password" class="inputBox" name="passwords[old]" type="password"/>
-              <input required placeholder="Enter new password" class="inputBox" name="passwords[new]" type="password"/>
-              <input type="submit" class="btn btn-default user" value="Change Password"/>
-            </form>
-            <button id="cancel" class="btn btn-default exitButton"> Cancel </button>
+        <div class="row">
+          <div class="col-sm-2 col-lg-4"></div>
+          <div class="col-xs-12 col-sm-8 col-lg-4">
+            <div class="account-wall pass">
+              <form id="change-password-form">
+                <input required placeholder="Enter old password" class="inputBox" name="passwords[old]" type="password"/>
+                <input required placeholder="Enter new password" class="inputBox" name="passwords[new]" type="password"/>
+                <input type="submit" class="btn btn-default user" value="Change Password"/>
+              </form>
+              <button id="cancel" class="btn btn-default exitButton"> Cancel </button>
+            </div>
           </div>
+          <div class="col-sm-2 col-lg-4"></div>
         </div>
       </div>
       <br />
