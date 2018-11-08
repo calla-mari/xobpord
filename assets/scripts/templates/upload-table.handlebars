@@ -20,9 +20,8 @@
                         {{#each uploads as |upload|}}
                             <div class="col-md-4 col-sm-6 portfolio-item">
                                 <div id="{{upload._id}}-uploads">
-                                    <a class="image portfolio-box portfolio-link portfolio-hover" target="_blank" href="{{upload.url}}">
-                                        <img class="img-fluid img" src="{{upload.url}}" alt="">
-                                    </a>
+                                    {{#imageOrNot upload.url}}
+                                    {{/imageOrNot}}
                                     <div class="portfolio-caption">
                                         <h4>{{upload.title}}</h4>
                                         <h5>{{upload.tag}}</h5>
