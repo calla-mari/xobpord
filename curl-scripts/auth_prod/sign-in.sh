@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl "https://xobpord2.herokuapp.com/sign-in" \
+curl "https://xobpord-server.herokuapp.com/sign-in" \
   --include \
   --request POST \
   --header "Content-Type: application/json" \

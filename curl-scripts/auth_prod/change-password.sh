@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl "https://xobpord2.herokuapp.com/change-password" \
+curl "https://xobpord-server.herokuapp.com/change-password" \
   --include \
   --request PATCH \
   --header "Authorization: Token token=${TOKEN}" \
