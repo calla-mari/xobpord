@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl "https://xobpord.herokuapp.com/sign-out" \
+curl "https://xobpord2.herokuapp.com/sign-out" \
   --include \
   --request DELETE \
   --header "Content-Type: application/json" \
